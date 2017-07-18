@@ -1,7 +1,10 @@
 Rails.application.routes.draw do
 
   scope path: "api" do
-    resources :actors
+    resources :actors do
+      resources :roles
+      resources :crimes
+    end
   end
 
   # The priority is based upon order of creation: first created -> highest priority.
